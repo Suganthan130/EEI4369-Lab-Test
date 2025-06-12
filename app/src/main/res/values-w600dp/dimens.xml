@@ -1,0 +1,17 @@
+<!--Scaled Value = Base Value × (600 / 360) || value*1.6-->
+<resources>
+
+    <dimen name="text_14sp">22sp</dimen>
+    <dimen name="text_16sp">25sp</dimen>
+    <dimen name="text_12sp">19sp</dimen>
+
+    <dimen name="padding_4dp">6.4dp</dimen>
+    <dimen name="padding_8dp">12.8dp</dimen>
+    <dimen name="padding_12dp">19.2dp</dimen>
+    <dimen name="padding_16dp">25.6dp</dimen>
+
+    <dimen name="card_radius_4dp">6.4dp</dimen>
+    <dimen name="card_radius_8dp">12.8dp</dimen>
+    <dimen name="card_radius_12dp">19.2dp</dimen>
+    <dimen name="card_radius_16dp">25.6dp</dimen>
+</resources>
