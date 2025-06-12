@@ -41,7 +41,7 @@ public class TemperatureActivity extends AppCompatActivity {
         sensorViewModel.getTemperatureLiveData().observe(this, temp -> {
             temperatureText.setText("Temp: " + temp + "°C");
 
-            if (temp == THRESHOLD) {
+            if (temp >= THRESHOLD) {
                 if (!hasPlayedAudio) {
                     playAudio();
                     hasPlayedAudio = true;
