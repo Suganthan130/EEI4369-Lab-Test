@@ -190,16 +190,26 @@ public class LoginActivity extends AppCompatActivity {
                 public void afterTextChanged(Editable s) {
                     if (s.toString().isEmpty()) {
                         loginVM.setPasswordValidationMutableLiveData(new ValidationModel("Password is required", false));
+                    } else if (!isPasswordSecure(s.toString())) {
+                        loginVM.setPasswordValidationMutableLiveData(new ValidationModel(
+                                "Password must be at least 6 chars with upper, lower, digit & symbol", false));
                     } else {
                         loginVM.setPasswordValidationMutableLiveData(new ValidationModel("", true));
                         password = s.toString();
                     }
+
 
                 }
             });
         }
 
     }
+    private boolean isPasswordSecure(String password) {
+        // At least 1 digit, 1 lower, 1 upper, 1 special char, and 6+ chars
+        String passwordPattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{6,}$";
+        return password.matches(passwordPattern);
+    }
+
 
     private void initialView() {
         materialEditTextUsername = findViewById(R.id.material_edit_text_username);

@@ -51,7 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             e.printStackTrace();
         }
 
-        db.close();
+      //  db.close();
         return result != -1;
     }
     @SuppressLint("Recycle")
